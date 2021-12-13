@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 //
 // solana-variables.scss
 // Use this to overwrite Bootstrap and Dashkit variables
@@ -16,7 +17,7 @@ $gray-300: #e5ebe9;
 $gray-400: #c6e6de;
 $gray-500: #abd5c6;
 $gray-600: #86b8b6;
-$gray-700: #698582;
+$gray-700: hsl(216, 36%, 48%);
 $gray-800: #387462;
 $gray-900: #1b4e3f;
 $black: #232323;
@@ -27,8 +28,8 @@ $rainbow-3: #79abd2;
 $rainbow-4: #38d0bd;
 $rainbow-5: #1dd79b;
 
-$primary: #42ba96 !default;
-$primary-dark: #33a382 !default;
+$primary: hsl(192, 84%, 54%) !default;
+$primary-dark: hsl(192, 84%, 42%) !default;
 $success: #19be56 !default;
 $secondary: $gray-700;
 $danger: #b45be1;
@@ -38,8 +39,8 @@ $light: $gray-100;
 $dark: $gray-900;
 
 $theme-colors: (
-  "black": $black,
-  "gray": $gray-900,
+  'black': $black,
+  'gray': $gray-900,
 ) !default;
 
 $card-border-color: $gray-300 !default;
@@ -49,7 +50,7 @@ $link-color: $primary-dark;
 
 // Global
 
-$font-family-base: "Rubik";
+$font-family-base: 'Poppins', 'Roboto', 'Helvetica', 'Arial', sans-serif;
 .display-2 {
   font-family: Saira, Helvetica, sans-serif;
 }

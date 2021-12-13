@@ -44,3 +44,8 @@
     @include badge-variant-soft(shift-color($value, $bg-soft-scale), $value);
   }
 }
+
+
+.badge.bg-dark {
+  background: linear-gradient(45deg, rgba(28,164,176,1) 0%, rgba(23,105,255,1) 100%);
+}

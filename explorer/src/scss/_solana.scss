@@ -11,8 +11,13 @@ pre {
   color: $black;
 }
 
-.badge.bg-primary, .btn-primary {
-  color: $gray-900;
+.badge.bg-primary {
+  background: linear-gradient(45deg, rgba(4,145,180,1) 0%, rgba(23,105,255,1) 100%);
+}
+
+.badge.bg-primary,
+.btn-primary {
+  color: $white;
 }
 
 .table > :not(:first-child) {
@@ -31,8 +36,8 @@ ul.log-messages {
   max-height: 20rem;
   overflow: auto;
   font-size: 0.8125rem;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
 }
 
 .popover-container {
@@ -205,9 +210,36 @@ h4.slot-pill {
   }
 }
 
-.search-bar__control {
-  border-radius: $border-radius !important;
-  padding: 4px;
+.search-bar {
+  &__control {
+    border-radius: $border-radius !important;
+    padding: 4px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: #bbc0ce;
+      transition: background 300ms ease-in-out;
+    }
+
+    &--is-focused {
+      &:before {
+        background: linear-gradient(
+          45deg,
+          rgba(28, 164, 176, 1) 0%,
+          rgba(23, 105, 255, 1) 100%
+        );
+      }
+    }
+  }
 }
 
 .search-bar__menu {
@@ -275,7 +307,7 @@ ul.tree li:before {
   margin-right: 0.1em;
   vertical-align: top;
   border-bottom: thin solid #808080;
-  content: "";
+  content: '';
   display: inline-block;
 }
 
@@ -345,7 +377,7 @@ div.inner-cards {
     border-left: 10px solid transparent;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    content: "";
+    content: '';
   }
 }
 

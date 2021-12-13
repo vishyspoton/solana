@@ -143,7 +143,7 @@ function ClusterToggle() {
       activeSuffix = "warning";
       break;
     case ClusterStatus.Failure:
-      activeSuffix = "danger";
+      activeSuffix = "primary";
       break;
     default:
       assertUnreachable(status);
@@ -163,7 +163,7 @@ function ClusterToggle() {
           );
 
         const btnClass = active
-          ? `border-${activeSuffix} text-${activeSuffix}`
+          ? `btn-primary`
           : "btn-white";
 
         const clusterLocation = (location: Location) => {
